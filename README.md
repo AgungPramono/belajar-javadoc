@@ -175,4 +175,12 @@ javadoc tidak akan memproses komen seperti diatas. Agar dapat diproses maka kome
     */
 ```
 
-## 
+## Dimana Javadoc ditulis ?
+   Tag javadoc dapata diletakan sebelum kelas atau metode (tidak perlu ruang antara deskripsi,
+   kelas atau metode).
+ 
+## Elemen apa yang Anda tambahkan tag Javadoc ?
+Kita dapat menambahkan tag Javadoc ke kelas, metode, dan interface.
+   * Untuk tag @author dan @version, tambahkan hanya ke kelas dan antarmuka.
+   * Tag @param hanya bisa ditambahkan ke metode dan konstruktor.
+   * Tag @return hanya ditambahkan ke metode.   
