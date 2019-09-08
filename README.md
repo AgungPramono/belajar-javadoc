@@ -6,7 +6,7 @@
  
  ### Mengapa membuat javadoc?
  
- Agar orang kita & orang lain tahu dengan maksud & tujuan kode yang ditulis & mempermudah penggunaan class bagi pihak lain yang mau menggunakan atau juga sebagai dokumentasi pribadi kalo-kalo kita lupa fungsi dari class-class yang telah kita buat
+ Agar kita & orang lain tahu apa maksud & tujuan kode yang ditulis & mempermudah penggunaan class bagi pihak lain yang mau menggunakan atau juga sebagai dokumentasi pribadi untuk menghindari kita lupa fungsi dari class-class atau method yang telah kita buat
  
  ### Dimana menulis javadoc?
  
@@ -117,40 +117,22 @@
         public void setKota(String kota) {
             this.kota = kota;
         }
-     
-        /**
-         * mendapatkan negara alamat
-         * @return the negara
-         */
-        public String getNegara() {
-            return negara;
-        }
-     
-        /**
-         * mengubah nilai negara alamat
-         * @param negara
-         *             negara yang baru
-         */
-        public void setNegara(String negara) {
-            this.negara = negara;
-        }
-     
     } 
 ```
  ## Tag-tag Javadoc
  
  |  Tag         |  Fungsi                                                                       |
  |--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
- | @author      |  Untuk mencantumkan nama penulis kode biasanya ditulis di leve class          |
- | @parameter   |  Mendefinisikan parameter yg akan dilewatkan dalam sebuah method              |
- | @return      |  Mendefinisikan nilai kembalian dari sebuah method                            |
- | @see         |  Menampilkan "See Also" dan juga untuk merefer ke kelas yang bersangkutan      |
- | @version     |  Menampilkan versi dari kode yang ditulis                                                                                                                                                                                                                            |
- | @throws      |  Mendefinisikan exception yg akan ditimubulan oleh sebuah method. Perhatikan bahwa kode Anda harus menunjukkan exception yang dilemparkan agar tag ini dapat divalidasi. Kalau tidak, Javadoc akan menghasilkan kesalahan.  ```@exception``` adalah tag alternatif.  |                                                           |
- | @Override    |  Melakukan pemeriksaan untuk melihat apakah metode ini mengoverride. biasanya digunakan untuk kelas abstract dan interface.                                                                                                                                          |
- | @since       |  Versi sejak fitur ditambahkan.                                                                                                                                                                                                                                      |                                                                            
- | {@link}      |  Digunakan untuk membuat tautan ke kelas atau metode lain. Contoh: {@link Foo # bar} tautan ke bilah metode milik kelas Foo. Untuk menautkan ke metode di kelas yang sama, cukup sertakan #bar.                                                                      |
- | @deprecated  |  Memungkinkan pengguna tahu kelas atau metode tidak lagi digunakan. Tag ini akan diposisikan secara langsung di Javadoc. Biasanya digunakan secara bersamaan dengan tag ```@see``` atau ```{@link}```.                                                               |
+ | ``@author ``     |  Untuk mencantumkan nama penulis kode biasanya ditulis di leve class          |
+ | ``@parameter``   |  Mendefinisikan parameter yg akan dilewatkan dalam sebuah method              |
+ | ``@return``      |  Mendefinisikan nilai kembalian dari sebuah method                            |
+ | ``@see ``        |  Menampilkan "See Also" dan juga untuk merefer ke kelas yang bersangkutan      |
+ | ``@version ``    |  Menampilkan versi dari kode yang ditulis                                                                                                                                                                                                                            |
+ | ``@throws``      |  Mendefinisikan exception yg akan ditimubulan oleh sebuah method. Perhatikan bahwa kode Anda harus menunjukkan exception yang dilemparkan agar tag ini dapat divalidasi. Kalau tidak, Javadoc akan menghasilkan kesalahan.  ```@exception``` adalah tag alternatif.  |                                                           |
+ | ``@Override ``   |  Melakukan pemeriksaan untuk melihat apakah metode ini mengoverride. biasanya digunakan untuk kelas abstract dan interface.                                                                                                                                          |
+ | ``@since ``      |  Versi sejak fitur ditambahkan.                                                                                                                                                                                                                                      |                                                                            
+ | ``{@link} ``     |  Digunakan untuk membuat tautan ke kelas atau metode lain. Contoh: {@link Foo # bar} tautan ke bilah metode milik kelas Foo. Untuk menautkan ke metode di kelas yang sama, cukup sertakan #bar.                                                                      |
+ | ``@deprecated``  |  Memungkinkan pengguna tahu kelas atau metode tidak lagi digunakan. Tag ini akan diposisikan secara langsung di Javadoc. Biasanya digunakan secara bersamaan dengan tag ```@see``` atau ```{@link}```.                                                               |
 
 ## Comment vs Javadoc
 
