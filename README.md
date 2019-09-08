@@ -1,14 +1,14 @@
-#Menulis Java Documentation
+# Menulis Java Documentation
 
- ###Javadoc?
+ ### Javadoc?
  
  javadoc itu merupakan dokumentasi dari class-class java, dokumentasi nya berisikan seluruh class, interface, dan metode-metode yang terdapat di dalamnya
  
- ###Mengapa membuat javadoc?
+ ### Mengapa membuat javadoc?
  
  Agar orang kita & orang lain tahu dengan maksud & tujuan kode yang ditulis & mempermudah penggunaan class bagi pihak lain yang mau menggunakan atau juga sebagai dokumentasi pribadi kalo-kalo kita lupa fungsi dari class-class yang telah kita buat
  
- ###Dimana menulis javadoc?
+ ### Dimana menulis javadoc?
  
  biasanya javadoc itu berada sebelum deklarasi class, metode atau property, contoh :
  
