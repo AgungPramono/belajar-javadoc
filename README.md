@@ -275,14 +275,126 @@ Jika ingin menghindari syntaks hyperlink lebih baik menggunakan tag ``<code>``.
 Jika ingin membuat referensi "lihat juga/see also", gunakan format ini: ``@see #baz``. 
 Untuk mengubah teks yang tertaut, letakkan kata setelah #baz seperti ini: ``@see`` metode ``#baz`` Baz.
 
+## Code Snippet di javadoc
+Javadoc mendukung tiga fitur berbeda untuk markup kode. Antara lain tag HTML ``<pre>`` dan ``<code>`` dan tag Javadoc ``{@code}``. 
 
+## ``<pre>``
+contoh :
+
+```java
+    /**
+     * <pre>
+     * public class JavadocTest {
+     *   // indentation and line breaks are kept 
+     * 
+     *   @SuppressWarnings
+     *   public List<String> generics(){
+     *     // '@', '<' and '>'  have to be escaped with HTML codes
+     *     // when used in annotations or generics
+     *   }
+     * } 
+     * </pre>
+     */
+    public class PreTest {}
+```
+output:
+
+```textmate
+    public class JavadocTest {
+       // indentation and line breaks are kept 
+       @SuppressWarnings
+       public List<String> generics(){
+         // '@', '<' and '>'  have to be escaped with HTML codes
+         // when used in annotations or generics
+       }
+     }
+```
+## ``<code>``
+Dalam tag ``<code>``, identasi akan diabaikan dan karakter khusus akan tetap ditampilkan.
+
+contoh :
+```java
+    /**
+     * Using <code>, indentation and line breaks are lost. 
+     * '@', '<' and '>'  have to be escaped with HTML codes.
+     * 
+     * An annotation <code>@Foo</code>; and a generic List<String>.
+     */
+    public class CodeHtmlTagTest {}
+```
+output :
+
+```textmate
+Using <code>, indentation and line breaks are lost. '@', '<' and '>' have to be escaped with HTML codes. An annotation @Foo; and a generic List<String>.
+```
+
+## ``{@code}``
+
+``{@code}`` adalah tag Javadoc yang ada pada Java 5. Kutipan kode yang berada dalam ``{@code}`` akan menampilkan karakter khusus dengan benar sehingga tidak perlu diformat secara secara manual. Tapi, indentasi dan line break akan hilang. 
+Ini bisa diperbaiki dengan menggunakan ``{@code}`` bersama dengan ``<pre>``
+
+contoh :
+
+```java
+    /**
+     * Using {@code @code} alone, indentation will be lost, but you don't have to
+     * escape special characters:
+     * 
+     * {@code An annotation <code>@Foo</code>; and a generic List<String>}.
+     */
+    public class CodeJavadocTagTest {}
+```
+
+output :
+
+```textmate
+Using @code alone, indentation will be lost, but you don't have to escape special characters: An annotation <code>@Foo</code>; and a generic List<String>.
+```
+## ``<pre>`` + ``{@code}``
+Menggabungkan ``<pre>`` dan ``{@code}``, indentasi dan jeda baris disimpan dan ``<`` dan ``>`` akan ditampilkan dengan benar. 
+Namun, karakter @ sekarang dievaluasi sebagai tag Javadoc jika diikuti dengan karakter non-spasi. 
+Yang lebih buruk: itu bahkan tidak bisa diformat dengan menggunakan kode angka HTML, karena kode angka HTML akan diklasifikasi oleh ``{@code}`` 
  
+```java
+    /**
+     * <pre>{@code 
+     * public class JavadocTest {
+     *   // indentation and line breaks are kept 
+     * 
+     *  @literal @SuppressWarnings
+     *   public List<String> generics(){
+     *     // '<' and '>'  are displayed correctly
+     *     // '@' CANNOT be escaped with HTML code, though!
+     *   }
+     * } 
+     * }</pre>
+     */
+    public class PreTest {}
+``` 
  
+ Output:
  
- 
- 
- 
- 
+ ```textmate
+    public class JavadocTest {
+        // indentation and line breaks are kept 
+        &#64;SuppressWarnings
+        public List<String> generics(){
+            // '<' and '>'  are displayed correctly
+            // '@' CANNOT be escaped with HTML code, though!
+        }
+    }
+```
+
+## Kesimpulan
+Tabel berikut merangkum berbagai fitur markup kode Javadoc.
+
+|   |``<pre>...</pre>`` | ``<code>...</code>``  | ``{@code ...}``  |``<pre>{@code ...}</pre>``|
+|---|---|---|---|---|
+|  keep indentation & line breaks | yes	|no	|no	|yes|
+| display '<' and '>' correctly |	no	| no	| yes	|yes|
+| display '@' correctly|	no|	no|	yes|	no|
+|  escape special characters via HTML number codes	|yes	|yes	|no need to escape	|no |
+
  
  
  
