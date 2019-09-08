@@ -181,6 +181,119 @@ javadoc tidak akan memproses komen seperti diatas. Agar dapat diproses maka kome
  
 ## Elemen apa yang Anda tambahkan tag Javadoc ?
 Kita dapat menambahkan tag Javadoc ke kelas, metode, dan interface.
-   * Untuk tag @author dan @version, tambahkan hanya ke kelas dan antarmuka.
-   * Tag @param hanya bisa ditambahkan ke metode dan konstruktor.
-   * Tag @return hanya ditambahkan ke metode.   
+   * Untuk tag ``@author`` dan ``@version``, tambahkan hanya ke kelas dan interface.
+   * Tag ``@param`` hanya bisa ditambahkan ke metode dan konstruktor.
+   * Tag ``@return`` hanya ditambahkan ke metode.   
+   
+## Access Modifier publik vs private di Javadoc
+   Javadoc hanya mencakup kelas, metode, dll yang ditandai sebagai publik. 
+   Elemen private tidak termasuk. Standarnya adalah bahwa kelas atau metode hanya tersedia untuk paket. Dalam hal ini, itu tidak termasuk dalam Javadoc.   
+   
+## Urutan Penggunaan tag javadoc
+
+Oracle menyarankan dalam menggunakan tag sesuai dg urutan berikut:
+```java
+    @author (classes and interfaces)
+    @version (classes and interfaces)
+    @param (methods and constructors)
+    @return (methods)
+    @throws (@exception is an older synonym)
+    @see
+    @since
+    @serial
+    @deprecated
+```
+## ```@param``` tags
+ag @param hanya berlaku untuk metode dan konstruktor, yang keduanya mempunyai parameter. Setelah tag ``@param``, 
+tambahkan nama parameter, dan kemudian deskripsi parameter, dalam huruf kecil, tanpa periode, seperti ini:  
+```java
+    /**
+    *
+    * @param message pesan yang akan dikirim ke server
+    */
+    public void sendMessage(String message){
+
+    }
+```
+Deskripsi parameter adalah frasa, bukan kalimat lengkap.
+
+## ``@return`` tag
+   Digunakan untuk metode yang mengembalikan nilai. Jika suatu metode mengembalikan ```void``` maka hindari memakai tag ``@return`` untuk menghindari kesalahan saat mengkompilasi Javadoc.
+
+## ``@throws`` tag
+Tag ``@throws`` ke metode hanya jika metode melempar jenis kesalahan tertentu. Contoh :
+
+```java
+/**
+*
+* @trhows IOException jika format input salah
+*/
+public void readFile()throws IOException {
+}
+```
+## tag ``@see``
+Tag ``@see`` memberikan referensi lihat juga
+```java
+    @see #field
+    @see #Constructor(Type, Type...)
+    @see #Constructor(Type id, Type id...)
+    @see #method(Type, Type,...)
+    @see #method(Type id, Type, id...)
+    @see Class
+    @see Class#field
+    @see Class#Constructor(Type, Type...)
+    @see Class#Constructor(Type id, Type id)
+    @see Class#method(Type, Type,...)
+    @see Class#method(Type id, Type id,...)
+    @see package.Class
+    @see package.Class#field
+    @see package.Class#Constructor(Type, Type...)
+    @see package.Class#Constructor(Type id, Type id)
+    @see package.Class#method(Type, Type,...)
+    @see package.Class#method(Type id, Type, id)
+```
+
+## Tautan
+Anda dapat membuat tautan ke kelas dan metode lain menggunakan tag ``{@link}``. 
+Berikut ini contoh dari standar kode Javadoc tentang membuat tautan:
+
+```java
+/**
+* First paragraph.
+* <p>
+* Link to a class named 'Foo': {@link Foo}.
+* Link to a method 'bar' on a class named 'Foo': {@link Foo#bar}.
+* Link to a method 'baz' on this class: {@link #baz}.
+* Link specifying text of the hyperlink after a space: {@link Foo the Foo class}.
+* Link to a method handling method overload {@link Foo#bar(String,int)}.
+*/
+public...
+```
+Untuk menautkan ke metode lain dalam kelas yang sama, gunakan format ini: ``{@link #baz}``. 
+Untuk menautkan ke metode di kelas lain, gunakan format ini: ``{@link Foo # baz}``. 
+Jika ingin menghindari syntaks hyperlink lebih baik menggunakan tag ``<code>``. 
+Jika ingin membuat referensi "lihat juga/see also", gunakan format ini: ``@see #baz``. 
+Untuk mengubah teks yang tertaut, letakkan kata setelah #baz seperti ini: ``@see`` metode ``#baz`` Baz.
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+    
+    
