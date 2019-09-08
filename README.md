@@ -395,8 +395,16 @@ Tabel berikut merangkum berbagai fitur markup kode Javadoc.
 | display '@' correctly|	no|	no|	yes|	no|
 |  escape special characters via HTML number codes	|yes	|yes	|no need to escape	|no |
 
+## Pakai yang mana ?
+ Melihat tabel di atas, sayangnya, tidak ada pilihan terbaik. Opsi mana yang digunakan tergantung pada konten potongan kode yang ingin Anda sematkan di Javadoc Anda. 
+ Panduan berikut dapat diturunkan untuk situasi yang berbeda:
  
  
+|Situation	          | Code Markup Feature	| Rationale     |
+|---------------------|---------------------|---------------|
+| inline code snippet|  ``{@code ...}`` | With ``{@code...}`` you don't need to escape special characters. For inline snippets, it doesn't matter that line breaks are lost
+| multi-line Java code snippet	|``<pre>...</pre>``|	For multi-line snippets, you need line breaks. So only ``<pre>`` and the combination of ``<pre>``and ``{@code...}``. However, only ``<pre>`` allows the use of `@` (escaped using HTML number codes), which you need for Java code containing annotations.
+| mutli-line HTML / XML code snippet|	``<pre>{@code...}</pre>``|	In HTML or XML code you probably need a lot of ``<`` and ``>`` while ``@`` is not as important, so it doesn't matter that ``@`` cannot be displayed. If you need an ``@``, you have to fall back on ``<pre>``
  
  
  
