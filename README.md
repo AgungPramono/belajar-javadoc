@@ -388,7 +388,40 @@ Tabel berikut merangkum berbagai fitur markup kode Javadoc.
 | multi-line Java code snippet	|``<pre>...</pre>``|	For multi-line snippets, you need line breaks. So only ``<pre>`` and the combination of ``<pre>``and ``{@code...}``. However, only ``<pre>`` allows the use of `@` (escaped using HTML number codes), which you need for Java code containing annotations.
 | mutli-line HTML / XML code snippet|	``<pre>{@code...}</pre>``|	In HTML or XML code you probably need a lot of ``<`` and ``>`` while ``@`` is not as important, so it doesn't matter that ``@`` cannot be displayed. If you need an ``@``, you have to fall back on ``<pre>``
  
- 
+# Langkah-langkah menulis java doc
+
+1. Tulis source code
+2. Tambahkan plugin jika menggunakan maven
+
+```xml
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.0.0</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+                <tags>
+                ...
+                </tags>
+            </plugin>
+        </plugins>
+    </build>
+```
+
+3.Jalankan perintah ``mvn javadoc:javadoc``
+
+# Referensi
+1. https://reflectoring.io/howto-format-code-snippets-in-javadoc/
+2. https://dzone.com/articles/a-guide-to-formatting-code-snippets-in-javadoc
+3. https://alvinalexander.com/java/edu/pj/pj010014
+4. https://www.tutorialspoint.com/java/java_documentation.htm
+5. https://www.oracle.com/technetwork/articles/java/index-137868.html
+
+
  
  
  
