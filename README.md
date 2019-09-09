@@ -135,6 +135,9 @@
  | ``{@link} ``     |  Digunakan untuk membuat tautan ke kelas atau metode lain. Contoh: {@link Foo # bar} tautan ke bilah metode milik kelas Foo. Untuk menautkan ke metode di kelas yang sama, cukup sertakan #bar.                                                                      |
  | ``@deprecated``  |  Memungkinkan pengguna tahu kelas atau metode tidak lagi digunakan. Tag ini akan diposisikan secara langsung di Javadoc. Biasanya digunakan secara bersamaan dengan tag ```@see``` atau ```{@link}``.                                                               |
 ```
+```
+```
+
 ## Comment vs Javadoc
 Sebuah comment biasanya ditulis sbb:
 ```textmate
