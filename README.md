@@ -136,14 +136,9 @@
  | ``@deprecated``  |  Memungkinkan pengguna tahu kelas atau metode tidak lagi digunakan. Tag ini akan diposisikan secara langsung di Javadoc. Biasanya digunakan secara bersamaan dengan tag ```@see``` atau ```{@link}``.                                                               |
 ```
 ## Comment vs Javadoc
-
 Sebuah comment biasanya ditulis sbb:
-
 ```textmate
-        
-```
-```texmate
-// sample comment...
+        // sample comment...
         
         /*
         sample comment
@@ -151,8 +146,6 @@ Sebuah comment biasanya ditulis sbb:
 ```
 
 javadoc tidak akan memproses komen seperti diatas. Agar dapat diproses maka komen harus ditulis sbb:
-
-
 ```textmate
         /**
         *
