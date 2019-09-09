@@ -1,14 +1,14 @@
 # Menulis Java Documentation
 
- ### Javadoc?
+### Javadoc?
  
  javadoc itu merupakan dokumentasi dari class-class java, dokumentasi nya berisikan seluruh class, interface, dan metode-metode yang terdapat di dalamnya
  
- ### Mengapa membuat javadoc?
+### Mengapa membuat javadoc?
  
  Agar kita & orang lain tahu apa maksud & tujuan kode yang ditulis & mempermudah penggunaan class bagi pihak lain yang mau menggunakan atau juga sebagai dokumentasi pribadi untuk menghindari kita lupa fungsi dari class-class atau method yang telah kita buat
  
- ### Dimana menulis javadoc?
+### Dimana menulis javadoc?
  
  biasanya javadoc itu berada sebelum deklarasi class, metode atau property, contoh :
  
@@ -119,7 +119,7 @@
         }
     } 
 ```
- ## Tag-tag Javadoc
+## Tag-tag Javadoc
  
  |  Tag         |  Fungsi                                                                       |
  |--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -128,34 +128,33 @@
  | ``@return``      |  Mendefinisikan nilai kembalian dari sebuah method                            |
  | ``@see ``        |  Menampilkan "See Also" dan juga untuk merefer ke kelas yang bersangkutan      |
  | ``@version ``    |  Menampilkan versi dari kode yang ditulis                                                                                                                                                                                                                            |
- | ``@throws``      |  Mendefinisikan exception yg akan ditimbulkan oleh sebuah method. Perhatikan bahwa kode Anda harus menunjukkan exception yang dilemparkan agar tag ini dapat divalidasi. Kalau tidak, Javadoc akan menghasilkan kesalahan.  ```@exception``` adalah tag alternatif.  |                                                           |
+ | ``@throws``      |  Mendefinisikan exception yg akan ditimbulkan oleh sebuah method. Perhatikan bahwa kode Anda harus menunjukkan exception  yang dilemparkan agar tag ini dapat divalidasi. Kalau tidak, Javadoc akan menghasilkan kesalahan.  ```@exception``` adalah tag alternatif.  |                                                           |
  | ``@Override ``   |  Melakukan pemeriksaan untuk melihat apakah metode ini mengoverride. biasanya digunakan untuk kelas abstract dan interface.                                                                                                                                          |
  | ``@since ``      |  Versi sejak fitur ditambahkan.                                                                                                                                                                                                                                      |                                                                            
  | ``{@link} ``     |  Digunakan untuk membuat tautan ke kelas atau metode lain. Contoh: {@link Foo # bar} tautan ke bilah metode milik kelas Foo. Untuk menautkan ke metode di kelas yang sama, cukup sertakan #bar.                                                                      |
  | ``@deprecated``  |  Memungkinkan pengguna tahu kelas atau metode tidak lagi digunakan. Tag ini akan diposisikan secara langsung di Javadoc. Biasanya digunakan secara bersamaan dengan tag ```@see``` atau ```{@link}```.                                                               |
 
 ## Comment vs Javadoc
-
 Sebuah comment biasanya ditulis sbb:
 
-```
-    // sample comment...
-    
-    /*
-    sample comment
-    */
+```textmate
+        // sample comment...
+        
+        /*
+        sample comment
+        */
 ```
 
-javadoc tidak akan memproses komen seperti diatas. Agar dapat diproses maka komen harus ditulis sbb:
+    javadoc tidak akan memproses komen seperti diatas. Agar dapat diproses maka komen harus ditulis sbb:
 
-```
-    /**
-    *
-    * comment javadoc
-    *
-    *
-    */
-```
+    ```textmate
+        /**
+        *
+        * comment javadoc
+        *
+        *
+        */
+    ```
 
 ## Dimana Javadoc ditulis ?
    Tag javadoc dapata diletakan sebelum kelas atau metode (tidak perlu ruang antara deskripsi,
@@ -185,7 +184,7 @@ Oracle menyarankan dalam menggunakan tag sesuai dg urutan berikut:
     @serial
     @deprecated
 ```
-## ```@param``` tags
+## Tag ```@param```
 ag @param hanya berlaku untuk metode dan konstruktor, yang keduanya mempunyai parameter. Setelah tag ``@param``, 
 tambahkan nama parameter, dan kemudian deskripsi parameter, dalam huruf kecil, tanpa periode, seperti ini:  
 ```java
@@ -199,10 +198,10 @@ tambahkan nama parameter, dan kemudian deskripsi parameter, dalam huruf kecil, t
 ```
 Deskripsi parameter adalah frasa, bukan kalimat lengkap.
 
-## ``@return`` tag
+## Tag ``@return``
    Digunakan untuk metode yang mengembalikan nilai. Jika suatu metode mengembalikan ```void``` maka hindari memakai tag ``@return`` untuk menghindari kesalahan saat mengkompilasi Javadoc.
 
-## ``@throws`` tag
+## Tag ``@throws``
 Tag ``@throws`` ke metode hanya jika metode melempar jenis kesalahan tertentu. Contoh :
 
 ```java
@@ -213,7 +212,7 @@ Tag ``@throws`` ke metode hanya jika metode melempar jenis kesalahan tertentu. C
 public void readFile()throws IOException {
 }
 ```
-## tag ``@see``
+## Tag ``@see``
 Tag ``@see`` memberikan referensi lihat juga
 ```java
     @see #field
@@ -366,8 +365,8 @@ Yang lebih buruk: itu bahkan tidak bisa diformat dengan menggunakan kode angka H
         }
     }
 ```
-
 ## Kesimpulan
+
 Tabel berikut merangkum berbagai fitur markup kode Javadoc.
 
 |   |``<pre>...</pre>`` | ``<code>...</code>``  | ``{@code ...}``  |``<pre>{@code ...}</pre>``|
@@ -378,6 +377,7 @@ Tabel berikut merangkum berbagai fitur markup kode Javadoc.
 |  escape special characters via HTML number codes	|yes	|yes	|no need to escape	|no |
 
 ## Pakai yang mana ?
+
  Melihat tabel di atas, sayangnya, tidak ada pilihan terbaik. Opsi mana yang digunakan tergantung pada konten potongan kode yang ingin Anda sematkan di Javadoc Anda. 
  Panduan berikut dapat diturunkan untuk situasi yang berbeda:
  
