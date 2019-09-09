@@ -119,24 +119,26 @@
         }
     } 
 ```
+
 ## Tag-tag Javadoc
  
- |  Tag         |  Fungsi                                                                       |
- |--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
- | ``@author ``     |  Untuk mencantumkan nama penulis kode biasanya ditulis di leve class          |
- | ``@parameter``   |  Mendefinisikan parameter yg akan dilewatkan dalam sebuah method              |
- | ``@return``      |  Mendefinisikan nilai kembalian dari sebuah method                            |
- | ``@see ``        |  Menampilkan "See Also" dan juga untuk merefer ke kelas yang bersangkutan      |
- | ``@version ``    |  Menampilkan versi dari kode yang ditulis                                                                                                                                                                                                                            |
- | ``@throws``      |  Mendefinisikan exception yg akan ditimbulkan oleh sebuah method. Perhatikan bahwa kode Anda harus menunjukkan exception  yang dilemparkan agar tag ini dapat divalidasi. Kalau tidak, Javadoc akan menghasilkan kesalahan.  ```@exception``` adalah tag alternatif.  |                                                           |
- | ``@Override ``   |  Melakukan pemeriksaan untuk melihat apakah metode ini mengoverride. biasanya digunakan untuk kelas abstract dan interface.                                                                                                                                          |
- | ``@since ``      |  Versi sejak fitur ditambahkan.                                                                                                                                                                                                                                      |                                                                            
+ |  Tag             |  Fungsi                                                                       |                                           |
+ |------------------|---------------------------------------------------------------------------------------------------------------------------|
+ | ``@author ``     |  Untuk mencantumkan nama penulis kode biasanya ditulis di leve class                                                      |
+ | ``@parameter``   |  Mendefinisikan parameter yg akan dilewatkan dalam sebuah method                                                          |
+ | ``@return``      |  Mendefinisikan nilai kembalian dari sebuah method                                                                        |
+ | ``@see ``        |  Menampilkan "See Also" dan juga untuk merefer ke kelas yang bersangkutan                                                 |
+ | ``@version ``    |  Menampilkan versi dari kode yang ditulis                                                                                 |
+ | ``@throws``      |  Mendefinisikan exception yg akan ditimbulkan oleh sebuah method. Perhatikan bahwa kode Anda harus menunjukkan exception|yang dilemparkan agar tag ini dapat divalidasi. Kalau tidak, Javadoc akan menghasilkan kesalahan.  ```@exception``` adalah tag Alamaternatif.                                                                    |                                                           
+ |
+ | ``@Override ``   |  Melakukan pemeriksaan untuk melihat apakah metode ini mengoverride. biasanya digunakan untuk kelas abstract dan interface.|
+ | ``@since ``      |  Versi sejak fitur ditambahkan.                                                         
  | ``{@link} ``     |  Digunakan untuk membuat tautan ke kelas atau metode lain. Contoh: {@link Foo # bar} tautan ke bilah metode milik kelas Foo. Untuk menautkan ke metode di kelas yang sama, cukup sertakan #bar.                                                                      |
  | ``@deprecated``  |  Memungkinkan pengguna tahu kelas atau metode tidak lagi digunakan. Tag ini akan diposisikan secara langsung di Javadoc. Biasanya digunakan secara bersamaan dengan tag ```@see``` atau ```{@link}```.                                                               |
 
 ## Comment vs Javadoc
 Sebuah comment biasanya ditulis sbb:
-
+```
 ```textmate
         // sample comment...
         
@@ -145,16 +147,16 @@ Sebuah comment biasanya ditulis sbb:
         */
 ```
 
-    javadoc tidak akan memproses komen seperti diatas. Agar dapat diproses maka komen harus ditulis sbb:
+javadoc tidak akan memproses komen seperti diatas. Agar dapat diproses maka komen harus ditulis sbb:
 
-    ```textmate
+```textmate
         /**
         *
         * comment javadoc
         *
         *
         */
-    ```
+```
 
 ## Dimana Javadoc ditulis ?
    Tag javadoc dapata diletakan sebelum kelas atau metode (tidak perlu ruang antara deskripsi,
