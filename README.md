@@ -391,7 +391,8 @@ Tabel berikut merangkum berbagai fitur markup kode Javadoc.
 # Langkah-langkah menulis java doc
 
 1. Tulis source code
-2. Tambahkan plugin jika menggunakan maven
+2. Tulis javadoc
+3. Tambahkan plugin jika menggunakan maven
 
 ```xml
     <build>
@@ -412,7 +413,7 @@ Tabel berikut merangkum berbagai fitur markup kode Javadoc.
     </build>
 ```
 
-3.Jalankan perintah ``mvn javadoc:javadoc``
+4.Jalankan perintah ``mvn javadoc:javadoc``
 
 # Referensi
 1. https://reflectoring.io/howto-format-code-snippets-in-javadoc/
