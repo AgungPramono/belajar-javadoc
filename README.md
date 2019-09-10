@@ -403,10 +403,10 @@ Tabel berikut merangkum berbagai fitur markup kode Javadoc.
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
+                    <!-- untuk output api doc-->
+                    <reportOutputDirectory>${project.basedir}/apidoc</reportOutputDirectory>
+                    <destDir>apidoc</destDir>
                 </configuration>
-                <tags>
-                ...
-                </tags>
             </plugin>
         </plugins>
     </build>
