@@ -420,8 +420,8 @@ Tabel berikut merangkum berbagai fitur markup kode Javadoc.
 2. https://dzone.com/articles/a-guide-to-formatting-code-snippets-in-javadoc
 3. https://alvinalexander.com/java/edu/pj/pj010014
 4. https://www.tutorialspoint.com/java/java_documentation.htm
-5. https://www.oracle.com/technetwork/articles/java/index-137868.html
-   [maven javadoc plugin]: https://search.maven.org/artifact/org.apache.maven.plugins/maven-javadoc-plugin/3.1.1/maven-plugin
+5. https://www.oracle.com/technetwork/articles/java/index-137868.html <br>
+[maven javadoc plugin]: https://search.maven.org/artifact/org.apache.maven.plugins/maven-javadoc-plugin/3.1.1/maven-plugin
 
 
  
