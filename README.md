@@ -39,7 +39,7 @@
      * Alamat merupakan representasi dari Alamat orang class ini digunakan oleh
      * class Orang sebagai Alamat tempat tinggal orang yang bersangkutan
      * 
-     * @author echo
+     * @author agung
      */
     public class Alamat implements Serializable {
      
