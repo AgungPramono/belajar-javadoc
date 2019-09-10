@@ -31,7 +31,7 @@
      *  
      *  Dibuat Tanggal : 2019 Sept 8
      */
-    package echo.gokil.my.bean;
+    package com.agung.bean;
      
     import java.io.Serializable;
      
