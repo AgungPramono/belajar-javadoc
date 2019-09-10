@@ -392,7 +392,7 @@ Tabel berikut merangkum berbagai fitur markup kode Javadoc.
 
 1. Tulis source code
 2. Tulis javadoc
-3. Tambahkan plugin jika menggunakan maven
+3. [Tambahkan plugin jika menggunakan maven] (https://search.maven.org/artifact/org.apache.maven.plugins/maven-javadoc-plugin/3.1.1/maven-plugin)
 
 ```xml
     <build>
@@ -400,7 +400,7 @@ Tabel berikut merangkum berbagai fitur markup kode Javadoc.
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
-                <version>3.0.0</version>
+                <version>3.1.1</version>
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
