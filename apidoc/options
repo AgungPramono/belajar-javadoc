@@ -1,0 +1,26 @@
+-classpath
+'/home/bits/.m2/repository/org/apache/commons/commons-lang3/3.9/commons-lang3-3.9.jar'
+-encoding
+'UTF-8'
+-protected
+-source
+'1.8'
+-sourcepath
+'/home/bits/Documents/belajar-javadoc/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2019. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'/home/bits/Documents/belajar-javadoc/apidoc'
+-docencoding
+'UTF-8'
+-doctitle
+'belajar-javadoc 1.0-SNAPSHOT API'
+-linkoffline
+'https://docs.oracle.com/javase/8/docs/api' '/home/bits/Documents/belajar-javadoc/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'belajar-javadoc 1.0-SNAPSHOT API'
